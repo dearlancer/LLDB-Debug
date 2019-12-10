@@ -40,8 +40,8 @@ Enjoy it now～
 4. 新开一个窗口执行```voltron view register```观察寄存器信息
 效果图如下：
 
-![lldb](https://github.com/dearlancer/LLDB-Debug/raw/master/assert/debug.jpg)
+![lldb](https://github.com/dearlancer/LLDB-Debug/raw/master/asset/debug.jpg)
 
 ### Api
-在lldb中执行的一些api，lldb自身的api参考[文档](https://github.com/dearlancer/LLDB-Debug/blob/master/assert/lldb_api.pdf)
+在lldb中执行的一些api，lldb自身的api参考[文档](https://github.com/dearlancer/LLDB-Debug/blob/master/asset/lldb_api.pdf)
 * sbr 设置断点,用法:```sbr addr module```
