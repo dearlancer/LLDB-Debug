@@ -33,3 +33,13 @@ cd voltron && ./install.sh
 echo 'command script import /Users/xxx/Library/Python/3.7/lib/python/site-packages/voltron/entry.py' >> ~/.lldbinit
 ```
 Enjoy it now～
+### 使用
+1. 通过usb连接手机,启动待debug的应用targetApp
+2. 通过issh进行连接 ```issh debug -a targetApp```
+3. 在新窗口中执行```lldb```,附加进程
+4. 新开一个窗口执行```voltron view register```观察寄存器信息
+效果图如下：
+
+![lldb](https://github.com/dearlancer/img/debug.jpg)
+
+### Api
