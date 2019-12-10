@@ -20,7 +20,7 @@ cd lldb-python-script
 echo 'command script import /Users/xxx/github/lldb-python-script/xlldb.py' >> ~/.lldbinit
 echo 'command alias freshxlldb command script import /Users/xxx/github/lldb-python-script/xlldb.py' >> ~/.lldbinit
 ```
-4. 配置sbr，[脚本链接](https://github.com/dearlancer/LLDB-Debug/python/sbr.py)
+4. 配置sbr，[脚本链接](https://github.com/dearlancer/LLDB-Debug/blob/master/python/sbr.py)
 ```
 mkdir ~/.lldb
 cp ./python/sbr.py ~/.lldb
@@ -40,6 +40,6 @@ Enjoy it now～
 4. 新开一个窗口执行```voltron view register```观察寄存器信息
 效果图如下：
 
-![lldb](https://github.com/dearlancer/img/debug.jpg)
+![lldb](https://github.com/dearlancer/LLDB-Debug/blob/master/img/debug.jpg)
 
 ### Api
