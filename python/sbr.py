@@ -16,7 +16,21 @@ def getASLR(module):
     else:
         return 0
 
+def rr(debugger, format_i, result, internal_dict):
+    """
+    读取寄存器信息
+    Usage: rr [i|x|d]
+    """
+    cmd = 'register read --format %s' % (format_i) if format_i else 'register read'
+    print(cmd)
+    debugger.HandleCommand(cmd)
+
+
 def sbr(debugger, command, result, internal_dict):
+    """
+    设置断点
+    Usage: sbr 1234 Mars
+    """
     if not command:
         print >> result, 'Please input the address and module!'
         return
@@ -38,6 +52,10 @@ def sbr(debugger, command, result, internal_dict):
     debugger.HandleCommand(cmd)
 
 def sread(debugger, command, result, internal_dict):
+    """
+    读取内存内容
+    Usage: sread 1234
+    """
     if not command:
         print >> result, 'Please input the address!'
         return
@@ -74,6 +92,7 @@ def saddr(debugger, command, result, internal_dict):
     print(result)
 
 def __lldb_init_module(debugger, internal_dict):
+    debugger.HandleCommand('command script add rr -f sbr.rr')
     debugger.HandleCommand('command script add sbr -f sbr.sbr')
     debugger.HandleCommand('command script add sread -f sbr.sread')
     debugger.HandleCommand('command script add saddr -f sbr.saddr')
